@@ -1,1 +1,2 @@
 test bind requests
+reply with actual error codes instead of just closing the connection
