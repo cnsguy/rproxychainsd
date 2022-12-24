@@ -1,0 +1,8 @@
+[server]
+host = "127.0.0.1"
+port = 1080
+
+[[chains]]
+entries = [
+    ["socks5", "127.0.0.1", 9050],
+]
