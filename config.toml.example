@@ -1,8 +1,18 @@
+# Address to listen for incoming connections on
 [server]
 host = "127.0.0.1"
 port = 1080
 
+# First chain, a random proxy will be picked from entries
 [[chains]]
 entries = [
     ["socks5", "127.0.0.1", 9050],
+]
+
+# Second chain, a random proxy will once again be picked from the entries
+# Everything will be routed through the previously chosen proxy first
+[[chains]]
+entries = [
+    ["socks5", "254.254.254.254", 1234],
+    ["socks5", "254.254.254.254", 5678],
 ]

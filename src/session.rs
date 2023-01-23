@@ -27,6 +27,7 @@ async fn connect_to_proxy(proxy: &Proxy) -> Result<TcpStream> {
     }
 }
 
+// XXX TODO cleanup
 async fn write_chain_common<S>(stream: &mut S, chain: &[Proxy]) -> Result<TcpStream>
 where
     S: AsyncWrite + Unpin,
@@ -63,6 +64,7 @@ where
     Ok(connection)
 }
 
+// XXX TODO cleanup
 async fn read_chain_common<S>(stream: &mut S, chain: &[Proxy]) -> Result<(Ipv4Addr, u16)>
 where
     S: AsyncRead + Unpin,

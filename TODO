@@ -1,2 +1,3 @@
 test bind requests
 reply with actual error codes instead of just closing the connection
+could support socks5 dns-based requests by translating them to ipv4 or failing
